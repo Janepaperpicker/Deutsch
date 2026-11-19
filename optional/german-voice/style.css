@@ -1,0 +1,156 @@
+/* SPDX-License-Identifier: GPL-3.0-or-later */
+:root {
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  color:#353139;
+  background:#faf7f2;
+  font-synthesis:none;
+  text-size-adjust:100%;
+  -webkit-text-size-adjust:100%
+}
+* {
+  box-sizing:border-box
+}
+body {
+  margin:0
+}
+main {
+  max-width:600px;
+  padding:28px;
+  margin:auto
+}
+header {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap
+}
+h1 {
+  font:400 32px/1.12 Georgia,serif;
+  letter-spacing:-.6px;
+  margin:0
+}
+p {
+  font-size:16px;
+  line-height:1.5;
+  color:#716b65;
+  margin:16px 0
+}
+button,input {
+  font:inherit;
+  font-size:16px
+}
+button {
+  border:0;
+  border-radius:18px;
+  min-height:48px;
+  padding:12px 22px;
+  background:#e8e9e5;
+  color:#353139;
+  font-weight:600;
+  cursor:pointer
+}
+button:disabled {
+  opacity:.5;
+  cursor:default
+}
+.primary {
+  background:#353139;
+  color:white
+}
+#install { width: 100%; }
+#cancel { width: 100%; margin-top: 8px; }
+.cream,.pill {
+  background:#f7e6b6
+}
+.pill {
+  padding:5px 12px;
+  border-radius:20px;
+  font-size:13px;
+  font-weight:600
+}
+.actions {
+  display:flex;
+  gap:10px;
+  margin-top:12px
+}
+.actions button {
+  flex:1
+}
+.quiet {
+  padding:8px 0;
+  background:none;
+  min-height:40px;
+  color:#716b65;
+  font-weight:400
+}
+input {
+  display:block;
+  width:100%;
+  border:1px solid #d6d3ce;
+  border-radius:16px;
+  padding:14px 16px;
+  background:#fffdf8;
+  color:#353139;
+  line-height:1.35;
+  margin-top:8px;
+  min-width:0
+}
+label {
+  font-size:15px;
+  font-weight:600
+}
+form {
+  margin:24px 0 0
+}
+footer {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  margin-top:24px;
+  font-size:14px
+}
+footer button {
+  white-space:nowrap;
+  flex-shrink:0
+}
+a {
+  color:inherit;
+  text-underline-offset:3px
+}
+progress {
+  display:block;
+  width:100%;
+  margin-top:16px;
+  accent-color:#766c51
+}
+button:focus-visible,a:focus-visible,input:focus-visible {
+  outline:3px solid #242424;
+  outline-offset:3px
+}
+[hidden] {
+  display:none!important
+}
+#status {
+  min-height:24px;
+  margin-bottom:0
+}
+#preview-note {
+  padding:12px 16px;
+  border-radius:16px;
+  background:#fff0cb;
+  color:#6b5935
+}
+@media(max-width:420px) {
+  main {
+    padding:20px
+  }
+  h1 {
+    font-size:29px
+  }
+}
+@media(prefers-reduced-motion:no-preference) {
+  button {
+    transition:background-color .15s
+  }
+}

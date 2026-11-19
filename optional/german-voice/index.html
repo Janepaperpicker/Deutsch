@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Offline German voice</title><link rel="stylesheet" href="./style.css"></head>
+<body><main><header><h1>Offline German voice</h1><span id="preview" class="pill" hidden>Preview</span></header>
+<p id="description">Download once to listen without a German device voice.</p>
+<p id="preview-note" hidden>This preview has not been verified on iOS or Android.</p>
+<div id="download"><button id="install" class="primary" disabled>Checking availability…</button><button id="cancel" hidden>Cancel download</button><progress id="progress" max="1" value="0" hidden aria-label="Voice download"></progress></div>
+<form id="speech"><label for="word">German word or phrase</label><input id="word" lang="de" maxlength="500" autocomplete="off" spellcheck="false" placeholder="die Wohnung"><div class="actions"><button id="listen" class="cream" disabled>Listen</button><button id="stop" type="button" hidden>Stop</button></div></form>
+<p id="status" role="status" aria-live="polite"></p>
+<footer><span>Thorsten voice · <a id="source" href="./NOTICE" target="_blank" rel="noreferrer">Licenses</a> · <a id="source-code" href="./NOTICE" target="_blank" rel="noreferrer">Source code</a></span><button id="remove" class="quiet" type="button" hidden>Remove download</button></footer>
+</main><script type="module" src="./page.mjs"></script></body></html>

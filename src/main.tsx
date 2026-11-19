@@ -1,3 +1,4 @@
+import { OfflineVoiceProvider } from './OfflineVoiceProvider.tsx'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
@@ -7,7 +8,7 @@ import { ConfirmProvider } from './ConfirmDialog.tsx'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ConfirmProvider>
-      <AppStartup />
+      <OfflineVoiceProvider><AppStartup /></OfflineVoiceProvider>
     </ConfirmProvider>
   </StrictMode>,
 )

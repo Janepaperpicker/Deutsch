@@ -83,4 +83,4 @@ Open the URL printed by Vite. Local study works without server credentials. See 
 
 ## Sources and license
 
-The app code is [MIT licensed](./LICENSE). The adapted starter vocabulary and dictionary are separate **CC BY-SA 4.0** works derived from Wiktionary, Kaikki/Wiktextract and the slovymovy word lists. Human audio has its own attribution and license. See [DATA_SOURCES.md](./DATA_SOURCES.md) for sources, modifications and limitations.
+The app code is [MIT licensed](./LICENSE). The separate [optional voice package](./optional/german-voice/README.md) is GPL-3.0-or-later. An opt-in preview is available from App settings or Offline voice on a study card. Its roughly 77 MB download runs on the device without sending study text to a speech service. Desktop offline tests pass; iOS and Android verification remains outstanding. The adapted starter vocabulary and dictionary are separate **CC BY-SA 4.0** works derived from Wiktionary, Kaikki/Wiktextract and the slovymovy word lists. Human audio has its own attribution and license. See [DATA_SOURCES.md](./DATA_SOURCES.md) for sources, modifications and limitations.

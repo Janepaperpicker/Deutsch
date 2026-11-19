@@ -276,6 +276,10 @@ try {
   }
   const learnerId = records.users.find((item) => item.email === email)._id.toString()
   const otherId = companion._id.toString()
+  const voiceMetadata = await request('/optional-voice/release.json', null, null)
+  assert.equal(voiceMetadata.status, 200)
+  assert.equal(voiceMetadata.body.id, 'thorsten-medium')
+  assert.equal(typeof voiceMetadata.body.enabled, 'boolean')
   // Accepted answer keys survive sync but malformed keys cannot enter progress.
   const aliasCard = {
     id:'alias-check',prompt:'die Wohnung',article:'die',meaning:'apartment',category:'noun',

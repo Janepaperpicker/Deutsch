@@ -1,0 +1,5 @@
+.offline-voice-dialog { padding: 0; border: 1px solid #e5e1da; border-radius: 24px; width: min(600px, calc(100vw - 32px)); max-height: calc(100dvh - 40px); background: #faf7f2; color: #353139; box-shadow: 0 24px 60px #252b2524; overflow: hidden; }
+.offline-voice-dialog::backdrop { background: #23262461; }
+.offline-voice-toolbar { display: flex; justify-content: flex-end; padding: 8px 16px 0; }
+.offline-voice-toolbar .quiet-button { margin: 0 0 0 auto; }
+.offline-voice-dialog iframe { display: block; width: 100%; height: min(620px, calc(100dvh - 112px)); border: 0; background: #faf7f2; }

@@ -1,0 +1,15 @@
+diff --git a/src/include/compat/wctype.h b/src/include/compat/wctype.h
+index e0d2c64e..e7b8c194 100644
+--- a/src/include/compat/wctype.h
++++ b/src/include/compat/wctype.h
+@@ -32,6 +32,10 @@
+ 
+ #include <ucd/ucd.h>
+ 
++#ifdef __EMSCRIPTEN__
++#include <wchar.h>
++#endif
++
+ #define iswalnum  ucd_isalnum
+ #define iswalpha  ucd_isalpha
+ #define iswblank  ucd_isblank

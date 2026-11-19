@@ -131,6 +131,8 @@ The dictionary builder includes source-backed words and form-of references neede
 
 `WordAudio` waits for voice-list updates, favours local German voices, and requires a separate user action for remote browser speech. A real user gesture initiates audio playback; failed playback remains retryable. No audio request happens merely by displaying a card.
 
+The optional GPL offline voice stays outside the MIT bundle in a same-origin frame. See [its build and release guide](./optional/german-voice/README.md). Test installer integrity/rollback, worker cancellation, offline preview navigation and server asset verification with `node --test tests/optionalVoice*.test.mjs`. A local staged manifest can exercise the candidate with `DEUTSCH_VOICE_ASSETS_DIR`; never mark phone checks complete based on desktop emulation. The checked-in release enables an explicit preview for physical-device testing; source/license/desktop-offline checks pass, while phone checks remain false. Do not commit models or generated source archives.
+
 ## Quiz answer fairness
 
 Choose deduplicates normalized displayed prompts before choosing three distractors and excludes known overlapping gloss alternatives or explicit accepted keys. Fewer than four safe choices keeps the existing unavailable/fallback behavior. This is conservative exclusion, not general semantic understanding.

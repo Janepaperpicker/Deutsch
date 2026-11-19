@@ -1,0 +1,124 @@
+{
+  "schema": 1,
+  "id": "thorsten-medium",
+  "version": "2026.11.19-preview.1",
+  "channel": "preview",
+  "enabled": true,
+  "review": {
+    "correspondingSource": true,
+    "licenses": true,
+    "coldStartOffline": true,
+    "ios": false,
+    "android": false
+  },
+  "assets": [
+    {
+      "role": "model",
+      "path": "/optional-voice/releases/2026.11.19-preview.1/model.onnx",
+      "bytes": 63201294,
+      "sha256": "7e64762d8e5118bb578f2eea6207e1a35a8e0c30595010b666f983fc87bb7819"
+    },
+    {
+      "role": "config",
+      "path": "/optional-voice/releases/2026.11.19-preview.1/model.json",
+      "bytes": 4819,
+      "sha256": "974adee790533adb273a1ac88f49027d2a1b8f0f2cf4905954a4791e79264e85"
+    },
+    {
+      "role": "runtime",
+      "path": "/optional-voice/releases/2026.11.19-preview.1/runtime.js",
+      "bytes": 142930,
+      "sha256": "90533a3fd7006df7f897c0d63c468996da5c8e430e39964d92ebe586c4996614"
+    },
+    {
+      "role": "runtime-wasm",
+      "path": "/optional-voice/releases/2026.11.19-preview.1/runtime.wasm",
+      "bytes": 10595041,
+      "sha256": "f533b5f21790563d7556c611c3835ac65848ee326da2689aac54ed7d9cc8c6a4"
+    },
+    {
+      "role": "phonemizer",
+      "path": "/optional-voice/releases/2026.11.19-preview.1/phonemizer.js",
+      "bytes": 101358,
+      "sha256": "87a111816f10de941282129b0cc76c34f533112da070514a34a9b84ce034ff96"
+    },
+    {
+      "role": "phonemizer-wasm",
+      "path": "/optional-voice/releases/2026.11.19-preview.1/phonemizer.wasm",
+      "bytes": 573469,
+      "sha256": "4d0f4304fde26c98cfecedb0969687dd29c4fad0466c9eb1575fe1d0dfcfc53b"
+    },
+    {
+      "role": "phonemizer-data",
+      "path": "/optional-voice/releases/2026.11.19-preview.1/phonemizer.data",
+      "bytes": 970190,
+      "sha256": "20bc800c9045bc71f578bc95b78eb36f6ef39db3eeb96455f1971adbe8818415"
+    },
+    {
+      "role": "model-card",
+      "path": "/optional-voice/releases/2026.11.19-preview.1/MODEL_CARD",
+      "bytes": 285,
+      "sha256": "5196b5ab0794e6056263a1f37c18bec407b61ac187529bee29d1c366871e5c9e"
+    },
+    {
+      "role": "source",
+      "path": "/optional-voice/releases/2026.11.19-preview.1/source.tar.gz",
+      "bytes": 26797074,
+      "sha256": "d8ca1d97d7f6c5ff1f03d747d38caed1e577970435cb239d2f392de5474b1ff9"
+    },
+    {
+      "role": "notices",
+      "path": "/optional-voice/releases/2026.11.19-preview.1/NOTICES.txt",
+      "bytes": 511061,
+      "sha256": "7e22baa30ff5b798a7e8870209b1be5c85418deddee0685bc3c72eb925492e67"
+    },
+    {
+      "role": "build-recipe",
+      "path": "/optional-voice/releases/2026.11.19-preview.1/rebuild.sh",
+      "bytes": 3666,
+      "sha256": "56dc1fcdc21fd3436ac8439044be54c15daa7bfe8bd15b162b3717febf33cfc2"
+    },
+    {
+      "role": "worker",
+      "path": "/optional-voice/releases/2026.11.19-preview.1/worker.js",
+      "bytes": 3124,
+      "sha256": "9f0d209cd585cb91f80f170c5e44dfd98db1dad84a9af25e740ba74cce708df8"
+    },
+    {
+      "role": "entry",
+      "path": "/optional-voice/releases/2026.11.19-preview.1/index.html",
+      "bytes": 1486,
+      "sha256": "d94b382e2adfb1e4dfc8f34141bc264d32d1b135169c38b7dc5aee4612ab3cfe"
+    },
+    {
+      "role": "page",
+      "path": "/optional-voice/releases/2026.11.19-preview.1/page.mjs",
+      "bytes": 8396,
+      "sha256": "766d7adbc60cce560866e1769f35fab843ce2224a028d3d5da30c72364ae06d1"
+    },
+    {
+      "role": "style",
+      "path": "/optional-voice/releases/2026.11.19-preview.1/style.css",
+      "bytes": 2375,
+      "sha256": "db28604986eaefe2ce26be242233dbde8913b6e093aa6cfb4640ab609af7d915"
+    },
+    {
+      "role": "installer",
+      "path": "/optional-voice/releases/2026.11.19-preview.1/installation.mjs",
+      "bytes": 8956,
+      "sha256": "a039fd29f063c65fb34bfb699d4233e0468c4da0a40480edc55750c05a3ce4a2"
+    },
+    {
+      "role": "runtime-client",
+      "path": "/optional-voice/releases/2026.11.19-preview.1/runtime.mjs",
+      "bytes": 2826,
+      "sha256": "9a2cb448fdb59919c7eb39369fd0845dd5d94c5f21d5aeb9bd7129e4c71abb6f"
+    },
+    {
+      "role": "service-worker",
+      "path": "/optional-voice/releases/2026.11.19-preview.1/sw.js",
+      "bytes": 1014,
+      "sha256": "22656e7b86574dc0c2725f9fcd8a97a5a884de1348d0ae5354427d73399074df"
+    }
+  ]
+}

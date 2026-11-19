@@ -1,0 +1,52 @@
+Optional German voice component
+Copyright (c) 2026 Deutsch Daily Deck contributors
+GPL-3.0-or-later; full license in LICENSE and generated NOTICES.txt.
+
+The repository contains source code. The generated release distributes an
+independently built phonemizer, its corresponding source and patch/build recipe,
+a pinned ONNX runtime, model configuration and Thorsten voice model. It is
+separate from the MIT application. The root MIT license does not relicense these
+components. Human Wikimedia recordings are not bundled or cached here.
+
+Phonemizer source:
+https://github.com/rhasspy/espeak-ng/tree/0f65aa301e0d6bae5e172cc74197d32a6182200f
+https://github.com/wide-video/piper-phonemize/tree/cfff8e52ebaea37c7e953ae2d06b174acb827ac4
+The eSpeak library is GPL-3.0-or-later with bundled data notices. Piper's wrapper
+has its own MIT notice, retained in the source archive and generated notices.
+The compatibility patch includes wchar.h before the ucd character macros when
+compiling for Emscripten. German and English dictionaries are retained in the
+runtime data package; unused dictionaries are omitted. The complete pinned
+sources, modifications and build recipe are supplied as source.tar.gz.
+
+Build tools:
+Emscripten 3.1.47, via emsdk commit
+708dcbcc9ee23bc7d2dad44fc90db377e38b771c.
+https://github.com/emscripten-core/emsdk
+Emscripten, libc, libc++, libc++abi, libunwind and compiler runtime notices are
+retained in generated NOTICES.txt. Compiler tools are not bundled in the app.
+The build is from pinned source; byte-identical builds across host toolchains
+are not claimed.
+
+ONNX Runtime Web 1.18.0:
+https://github.com/microsoft/onnxruntime/tree/v1.18.0
+MIT; its license and full third-party notice file accompany the release.
+The runtime executes in one worker thread without a remote speech service.
+
+Voice:
+Thorsten Mueller / https://github.com/thorstenMueller/Thorsten-Voice
+Model mirrored at the fixed revision:
+https://huggingface.co/diffusionstudio/piper-voices/tree/840e38a7e26d813bd6221b78cfbaefa3585b3f71/de/de_DE/thorsten/medium
+The supplied MODEL_CARD describes CC0 Thorsten data and fine-tuning from the
+Lessac medium voice. Preserve that card alongside the model repository terms;
+recording data, model weights and program code have separate provenance.
+Output is synthesized speech, not a human recording. Pronunciation quality is
+not guaranteed for every imported name, abbreviation, phrase or homograph.
+
+Source access:
+The release offers source.tar.gz and rebuild.sh at the same versioned download
+location as its runtime. They are available separately through Source code;
+installation does not fetch an unused source archive onto a learner's device.
+Generated NOTICES.txt includes the complete applicable upstream license texts.
+
+The early VITS Web / diffusionstudio piper-wasm prototype is not redistributed.
+This release uses the separately compiled pinned-source phonemizer instead.

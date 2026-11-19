@@ -1,3 +1,4 @@
+import { useOfflineVoice } from './offlineVoiceContext'
 import { commitDeckChanges, mergeStoredAccountDeck, replaceStoredDeck, DeckConflictError, DeckLimitError } from './deckStorage'
 import { NounPlural } from './NounPlural'
 import { WordLookupProvider } from './WordLookupProvider'
@@ -308,6 +309,7 @@ function AppSettingsPanel({ settings, onChange, onClose, messageSound, signedIn 
   messageSound: ReturnType<typeof useMessageSound>
   signedIn: boolean
 }) {
+  const offlineVoice = useOfflineVoice()
   const panelRef = useRef<HTMLElement>(null)
   useEffect(() => { panelRef.current?.focus() }, [])
   usePanelDismiss(panelRef, onClose, () => false)
@@ -352,6 +354,7 @@ function AppSettingsPanel({ settings, onChange, onClose, messageSound, signedIn 
       <button type="button" className="sound-test-button" onClick={messageSound.test} disabled={!messageSound.enabled}>Test sound</button>
       {messageSound.error && <p role="alert">{messageSound.error}</p>}
       {signedIn && messageSound.enabled && messageSound.connection === 'offline' && <p role="status">Live message sounds are unavailable. Check your connection.</p>}
+      {offlineVoice && <button type="button" className="sound-test-button" onClick={() => offlineVoice.open()}>Offline German voice{offlineVoice.preview ? ' preview' : ''}</button>}
     </section>
   )
 }
@@ -1195,6 +1198,7 @@ function AppFooter({ signedIn }: { signedIn: boolean }) {
 
 function App({ initialDeck }: { initialDeck: LoadedDeck }) {
   const confirm = useConfirm()
+  const clearOfflineVoice = useOfflineVoice()?.clear
   useLayoutEffect(() => {
     const state = window.history.state
     if (!state || typeof state !== 'object') return
@@ -1467,6 +1471,7 @@ function App({ initialDeck }: { initialDeck: LoadedDeck }) {
     setCommunityCacheOwner(user?.id ?? null)
     const nextIdentity = user?.email ?? null
     if (accountIdentity.current !== nextIdentity) {
+      clearOfflineVoice?.()
       accountIdentity.current = nextIdentity
       setAccountSyncReady(false)
       setAccountSyncError(null)
@@ -1485,7 +1490,7 @@ function App({ initialDeck }: { initialDeck: LoadedDeck }) {
       showToast(failure instanceof Error ? `Could not update saved chat storage: ${failure.message}` : 'Could not update saved chat storage on this device.', 'error')
     })
     if (groupInvitationRef.current && user?.emailVerified && !companionWorkspaceEntry.current) openCompanionWorkspace()
-  }, [openCompanionWorkspace, showToast, setChatOutboxOwner])
+  }, [openCompanionWorkspace, showToast, setChatOutboxOwner, clearOfflineVoice])
   useEffect(() => {
     if (!accountUser?.emailVerified) return
     let active = true

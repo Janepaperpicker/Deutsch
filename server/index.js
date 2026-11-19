@@ -1,3 +1,4 @@
+import { createOptionalVoiceRouter } from './optionalVoice.js'
 import bcrypt from 'bcryptjs'
 import MongoStore from 'connect-mongo'
 import dotenv from 'dotenv'
@@ -603,6 +604,7 @@ app.use((error, _req, res, _next) => {
   if (!res.headersSent) res.status(500).json({ error: 'The request could not be completed.' })
 })
 
+app.use('/optional-voice', createOptionalVoiceRouter({ componentDirectory: resolve(rootPath, 'optional/german-voice'), assetDirectory: process.env.DEUTSCH_VOICE_ASSETS_DIR || undefined }))
 app.use(express.static(resolve(rootPath, 'dist')))
 app.get(/^(?!\/api\/).*/, (_req, res, next) => {
   res.sendFile(resolve(rootPath, 'dist/index.html'), (error) => {
